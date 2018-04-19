@@ -9,6 +9,7 @@ import globalClickHandler from './router/globalClickHandler';
 angular
     .module('routerMigration', [
         require('./router/state').default,
+        require('./router/location').default,
         require('./angular/list').default,
         require('./angular/detail').default,
     ])
