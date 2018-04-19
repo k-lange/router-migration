@@ -2,7 +2,7 @@ import angular from 'angular';
 import { map } from 'lodash/fp';
 import api from '../../api';
 
-const GOOD_SHOWS = ['2228', '6508', '1271', '25245'];
+const GOOD_SHOWS = [2228, 6508, 1271, 25245, 28240, 20412, 16579, 670];
 
 export default angular
     .module('rm.list', [require('./component').default])
