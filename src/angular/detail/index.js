@@ -1,5 +1,4 @@
 import angular from 'angular';
-import { filter } from 'lodash';
 import api from '../../api';
 
 export default angular
