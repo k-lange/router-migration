@@ -1,0 +1,18 @@
+.list-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: start;
+    padding: 0;
+    margin: 0;
+}
+
+.list-link {
+    display: block;
+}
+
+.list-image {
+    width: 100%;
+}
