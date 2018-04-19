@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { map } from 'lodash/fp';
+import history from './router/history';
 import AngularRouteRenderer from './router/AngularRouteRenderer';
 
 export default function App({ states, $injector }) {
     return (
-        <BrowserRouter>
+        <Router history={history}>
             <Switch>
                 {map(
                     state => (
@@ -25,6 +26,6 @@ export default function App({ states, $injector }) {
                     states
                 )}
             </Switch>
-        </BrowserRouter>
+        </Router>
     );
 }
