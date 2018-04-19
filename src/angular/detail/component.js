@@ -13,15 +13,17 @@ const template = `
             <div>{{($ctrl.show.network || $ctrl.show.webChannel).country.name}} | {{$ctrl.year}} | {{$ctrl.show.status}}</div>
             <div ng-bind-html="$ctrl.summary"></div>
         </div>
-    <div>
+    </div>
+    <cast-members cast="$ctrl.cast"></cast-members>
 </div>
 `;
 
 export default angular
-    .module('rm.detail.component', [])
+    .module('rm.detail.component', [require('../cast').default])
     .component('showDetail', {
         bindings: {
             show: '<',
+            cast: '<',
         },
         template,
         controller: ['$sce', controller],
