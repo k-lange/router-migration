@@ -2,7 +2,7 @@
 
 This is a simple single page app that has two routes: A page with a list of tv shows and a detail view for a single show. It uses the [TV Maze-API](http://www.tvmaze.com) and [ladda-cache](https://www.ladda.io) as a framework-agnostic caching library.
 
-The master-branch contains of a pure [Angular 1](https://angularjs.org)-app that uses [UI-Router](https://ui-router.github.io) (0.x legacy version). The [first PR](https://github.com/k-lange/router-migration/pull/1) removes UI-Router and replaces it with [React Router](https://reacttraining.com/react-router/) – without changing the Angular routes & pages itself, but instead by reimplementing a subset of the UI-Router interface. We used this approach with great success at [Small Improvements](https://www.small-improvements.com) in the migration of our app from Angular to React.
+The master-branch contains of a pure [Angular 1](https://angularjs.org)-app that uses [UI-Router](https://ui-router.github.io) (0.x legacy version). The [first PR](https://github.com/k-lange/router-migration/pull/1) removes UI-Router and replaces it with [React Router](https://reacttraining.com/react-router/) – without changing the Angular routes & pages itself, but instead by reimplementing a subset of the UI-Router interface. We used this approach with great success at [Small Improvements](https://www.small-improvements.com) in the migration of our app from Angular to React. The [second PR](https://github.com/k-lange/router-migration/pull/2) rewrites the list view in React.
 
 ## Caveat
 
