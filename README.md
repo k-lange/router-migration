@@ -6,7 +6,7 @@ The master-branch contains of a pure [Angular 1](https://angularjs.org)-app that
 
 ## Caveat
 
-The migration PR only implements a very, very small subset of the UI-Router interface. It will most likely not work for your app if you're faced with the same transition. That's also why this is not a library, it's merely an example that it can be done. Evaluate for yourself how much of UI-Router's features you're currently using and what migration strategy makes sense for you – it will surely be different for every app.
+The migration PR only implements a very, very small subset of the UI-Router interface. Migrating your app might need additional steps to fully cover the features you're using from UI-Router. That's also why this is not a library, it's an example that it can be done. Evaluate for yourself how much of UI-Router's features you're currently using and what migration strategy makes sense for you – it will surely be different for every app.
 
 ## Running the App
 
