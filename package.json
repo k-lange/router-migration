@@ -7,6 +7,7 @@
     "delegate": "^3.2.0",
     "history": "^4.7.2",
     "ladda-cache": "^0.2.16",
+    "ladda-react": "^0.2.15",
     "lodash": "^4.17.5",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

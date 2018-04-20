@@ -4,6 +4,8 @@ import { map } from 'lodash/fp';
 import history from './router/history';
 import AngularRouteRenderer from './router/AngularRouteRenderer';
 
+import List from './react/List';
+
 export default function App({ states, $injector }) {
     return (
         <Router history={history}>
@@ -25,6 +27,7 @@ export default function App({ states, $injector }) {
                     ),
                     states
                 )}
+                <Route path="/" component={List} />
             </Switch>
         </Router>
     );
