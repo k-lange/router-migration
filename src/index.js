@@ -1,19 +1,25 @@
 import './index.css';
+import React from 'react';
+import { render } from 'react-dom';
 import angular from 'angular';
+import delegate from 'delegate';
+import App from './App';
+import globalClickHandler from './router/globalClickHandler';
 
 angular
     .module('routerMigration', [
-        require('angular-ui-router'),
+        require('./router/state').default,
+        require('./router/location').default,
         require('./angular/list').default,
         require('./angular/detail').default,
     ])
-    .config(['$locationProvider', enableHtml5Mode])
-    .run(['$rootScope', logRouteErrors]);
+    .run(['$state', '$injector', renderApp]);
 
-function enableHtml5Mode($locationProvider) {
-    $locationProvider.html5Mode({ enabled: true });
-}
+function renderApp($state, $injector) {
+    const states = $state.getAll();
+    const node = document.getElementById('spa-root');
 
-function logRouteErrors($rootScope) {
-    $rootScope.$on('$stateChangeError', (...args) => console.error(...args));
+    delegate('a', 'click', globalClickHandler);
+
+    render(<App states={states} $injector={$injector} />, node);
 }
